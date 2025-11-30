@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Alcatras — Features</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#070607;
+  --panel:#0b0b0b;
+  --neon:#290b75;
+  --muted:#9aa0a6;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background: radial-gradient(ellipse at center, rgba(41,11,117,0.02) 0%, transparent 40%), var(--bg);
+  color:#e6e6e6;
+  font-family:"Share Tech Mono", monospace;
+  padding:28px;
+}
+
+/* top nav */
+.nav{
+  display:flex;gap:18px;align-items:center;margin-bottom:28px;
+  padding:10px 14px;border-radius:6px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.06));
+  border:1px solid rgba(41,11,117,0.06);
+  box-shadow:0 6px 30px rgba(41,11,117,0.03) inset;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;
+  font-family:"Press Start 2P", monospace;color:var(--neon);text-shadow:0 0 14px rgba(41,11,117,0.18);
+  font-size:14px;
+}
+.menu{margin-left:auto;display:flex;gap:12px}
+.menu a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;border:1px solid transparent;font-size:11px}
+.menu a:hover{color:var(--neon);text-shadow:0 0 10px rgba(41,11,117,0.12);border-color:rgba(41,11,117,0.04)}
+
+h1{
+  font-family:"Press Start 2P", monospace;
+  font-size:26px;color:var(--neon);
+  text-shadow:0 0 14px rgba(41,11,117,0.24);
+  margin-bottom:20px;
+}
+.subtitle{
+  color:var(--muted);
+  margin-bottom:40px;
+  max-width:700px;
+}
+
+/* features grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:20px;
+}
+.card{
+  background:linear-gradient(180deg,#0b0b0b,#0a0a0a);
+  border:1px solid rgba(41,11,117,0.05);
+  border-radius:10px;
+  padding:20px;
+  box-shadow:0 8px 28px rgba(0, 0, 0, 0.6);
+  transition:all 0.3s ease;
+}
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 20px rgba(41, 11, 117, 0.500);
+}
+.card h3{
+  font-family:"Press Start 2P", monospace;
+  font-size:12px;
+  color:var(--neon);
+  margin:0 0 10px 0;
+}
+.card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+  margin:0;
+}
+
+/* footer */
+.footer{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid rgba(41,11,117,0.05);
+  color:var(--muted);
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">Alcatras</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="features.html" style="color:var(--neon)">Features</a>
+      <a href="purchase.html">Purchase</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Features</h1>
+    <div class="subtitle">Discover what makes Alcatras special</div>
+
+    <section class="grid">
+      <article class="card">
+        <h3>01 — Ultimate Control</h3>
+        <p>Lightweight gallery for pixel artists. Upload safe, family-friendly images and show them with retro frames.</p>
+      </article>
+
+      <article class="card">
+        <h3>02 — Security</h3>
+        <p>Alcatras provides strong security and privacy features, including self-deletion, hidden file system, full encryption etc. </p>
+      </article>
+
+      <article class="card">
+        <h3>03 — Trading</h3>
+        <p>You can trade or gift your devices with other users of Alcatras.</p>
+      </article>
+
+      <article class="card">
+        <h3>04 — Games</h3>
+        <p>Feeling bored? Challenge your devices to a game, but beware, if they lose, they won’t be usable again. (optional)</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> Alcatras</div>
+  </footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

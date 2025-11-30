@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Alcatras — Features</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#070607;
+  --panel:#0b0b0b;
+  --neon:#290b75;
+  --muted:#9aa0a6;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background: radial-gradient(ellipse at center, rgba(41,11,117,0.02) 0%, transparent 40%), var(--bg);
+  color:#e6e6e6;
+  font-family:"Share Tech Mono", monospace;
+  padding:28px;
+}
+
+/* top nav */
+.nav{
+  display:flex;gap:18px;align-items:center;margin-bottom:28px;
+  padding:10px 14px;border-radius:6px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.06));
+  border:1px solid rgba(41,11,117,0.06);
+  box-shadow:0 6px 30px rgba(41,11,117,0.03) inset;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;
+  font-family:"Press Start 2P", monospace;color:var(--neon);text-shadow:0 0 14px rgba(41,11,117,0.18);
+  font-size:14px;
+}
+.menu{margin-left:auto;display:flex;gap:12px}
+.menu a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;border:1px solid transparent;font-size:11px}
+.menu a:hover{color:var(--neon);text-shadow:0 0 10px rgba(41,11,117,0.12);border-color:rgba(41,11,117,0.04)}
+
+h1{
+  font-family:"Press Start 2P", monospace;
+  font-size:26px;color:var(--neon);
+  text-shadow:0 0 14px rgba(41,11,117,0.24);
+  margin-bottom:20px;
+}
+.subtitle{
+  color:var(--muted);
+  margin-bottom:40px;
+  max-width:700px;
+}
+
+/* features grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:20px;
+}
+.card{
+  background:linear-gradient(180deg,#0b0b0b,#0a0a0a);
+  border:1px solid rgba(41,11,117,0.05);
+  border-radius:10px;
+  padding:20px;
+  box-shadow:0 8px 28px rgba(0,0,0,0.6);
+  transition:all 0.3s ease;
+}
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 20px rgba(41,11,117,0.15);
+}
+.card h3{
+  font-family:"Press Start 2P", monospace;
+  font-size:12px;
+  color:var(--neon);
+  margin:0 0 10px 0;
+}
+.card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+  margin:0;
+}
+
+/* payment panel */
+.payment-panel{
+  max-width:600px;
+  margin:60px auto;
+  background:linear-gradient(180deg,#0b0b0b,#0a0a0a);
+  border:3px solid var(--neon);
+  border-radius:20px;
+  padding:40px;
+  box-shadow:0 0 40px rgba(41,11,117,0.4), 0 0 80px rgba(41,11,117,0.2);
+  position:relative;
+}
+.close-btn{
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:none;
+  border:none;
+  color:var(--neon);
+  font-size:24px;
+  cursor:pointer;
+  font-family:"Press Start 2P", monospace;
+  text-shadow:0 0 10px rgba(41,11,117,0.5);
+}
+.close-btn:hover{
+  text-shadow:0 0 20px rgba(41,11,117,0.8);
+}
+.panel-title{
+  font-family:"Press Start 2P", monospace;
+  font-size:28px;
+  color:var(--neon);
+  text-align:center;
+  text-shadow:0 0 20px rgba(41,11,117,0.6);
+  margin:0 0 30px 0;
+  letter-spacing:2px;
+}
+.divider{
+  height:2px;
+  background:linear-gradient(90deg, transparent, var(--neon), transparent);
+  margin:30px 0;
+  box-shadow:0 0 10px rgba(41,11,117,0.5);
+}
+.payment-option{
+  background:rgba(0,0,0,0.4);
+  border:2px solid var(--neon);
+  border-radius:12px;
+  padding:18px 24px;
+  margin:16px 0;
+  font-family:"Press Start 2P", monospace;
+  font-size:14px;
+  color:var(--neon);
+  text-align:center;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  box-shadow:0 0 15px rgba(41,11,117,0.3);
+}
+.payment-option:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 25px rgba(41,11,117,0.6);
+  background:rgba(41,11,117,0.1);
+  text-shadow:0 0 15px rgba(41,11,117,0.8);
+}
+
+/* footer */
+.footer{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid rgba(41,11,117,0.05);
+  color:var(--muted);
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">Alcatras</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="purchase.html" style="color:var(--neon)">Purchase</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+<main>
+  <div class="payment-panel">
+    <button class="close-btn">×</button>
+    <h1 class="panel-title">PAYMENT<br>METHODS</h1>
+    <div class="divider"></div>
+    
+    <div class="payment-option">Crypto | 20 $</div>
+    <div class="payment-option">PayPal | 20 $</div>
+    <div class="payment-option">Stripe | soon</div>
+    <a href="https://mioclient.me" target="_blank" class="payment-option" style="text-decoration:none;display:block">Mio Client invite | 20 $</a>
+  </div>
+
+</main></div>
